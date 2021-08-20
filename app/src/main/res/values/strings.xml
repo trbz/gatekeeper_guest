@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Gatekeeper Guest</string>
+    <string name="unlock">Unlock</string>
+    <string name="skip">Skip</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="guest_id">Enter guest id</string>
+</resources>
