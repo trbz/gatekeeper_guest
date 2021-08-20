@@ -188,12 +188,16 @@ public class MainActivity extends AppCompatActivity {
                         snackbarConnection.show();
                         stationIdEditText.setEnabled(false);
 
-                        unlockButton.setVisibility(View.VISIBLE);
+
                         expirationTimeTV.setVisibility(View.VISIBLE);
                         accessTimeLeftTV.setVisibility(View.VISIBLE);
 
                         access_left = Integer.parseInt(guestInfo.get(1))
                                 - Integer.parseInt(guestInfo.get(0));
+
+                        if(access_left > 0){
+                            unlockButton.setVisibility(View.VISIBLE);
+                        }
 
                         accessTimeLeftTV.setText(POSSIBLE_ACCESS + access_left);
 
