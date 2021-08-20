@@ -36,7 +36,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXPIRATION_TIME = "EXPIRATION TIME: ";
-    public static final String POSSIBLE_ACCESS = "YOU CAN ACCESS: ";
+    public static final String POSSIBLE_ACCESS = "POSSIBLE ACCESSES: ";
 
     private int access_left;
 
@@ -169,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
     private final Emitter.Listener connected =
             objects -> {
 
-
                 List<String> guestInfo = Arrays.asList(Arrays.toString(objects)
                         .replace("[", "")
                         .replace("]", "")
@@ -179,9 +178,6 @@ public class MainActivity extends AppCompatActivity {
                         .replace("{", "")
                         .replace("}", "")
                         .split(",| "));
-
-
-                System.out.println(Arrays.toString(guestInfo.toArray()));
 
                 runOnUiThread(new Runnable() {
                     @SneakyThrows
